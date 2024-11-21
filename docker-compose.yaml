@@ -10,3 +10,9 @@ services:
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
     restart: unless-stopped
+    networks:
+      - xray_vpn_services_network
+
+networks:
+  xray_vpn_services_network:
+    external: true
